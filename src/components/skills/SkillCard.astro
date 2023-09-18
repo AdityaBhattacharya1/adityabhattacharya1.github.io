@@ -1,0 +1,68 @@
+---
+const { number, title, altText } = Astro.props
+let resStr = number < 10 ? `0${number}.` : `${number}.`
+---
+
+<style>
+	.card-container {
+		border: 2px solid #ebef13;
+		color: #ebef13;
+		background-color: #000821;
+		border-radius: 25px;
+		padding: 0.5rem 1rem 1.5rem 1.5rem;
+		background-color: #dfdbe5;
+		background-image: linear-gradient(
+				rgba(0, 8, 33, 0.955),
+				rgba(0, 8, 33, 0.949)
+			),
+			url('/temple.svg');
+
+		position: relative;
+		overflow: hidden;
+	}
+
+	.card-container::after {
+		color: #44ab9729;
+		content: attr(data-bg-text);
+		display: block;
+		font-size: 3rem;
+		line-height: 1;
+		position: absolute;
+		font-weight: bold;
+		bottom: 15px;
+		right: 10px;
+	}
+
+	.text,
+	.title-span {
+		font-family: 'Roboto Mono', monospace;
+		padding-top: 3rem;
+	}
+
+	.title-span {
+		padding-top: 5px;
+		font-size: 2rem;
+		display: block;
+		font-weight: bold;
+	}
+
+	@media screen and (max-width: 768px) {
+		.text {
+			padding-top: 0;
+		}
+
+		.title-span {
+			font-size: 2rem;
+		}
+
+		.card-container::after {
+			font-size: 4rem;
+		}
+	}
+</style>
+<div class="card-container" data-bg-text={altText}>
+	<div class="text">
+		{resStr}
+		<span class="title-span">{title}</span>
+	</div>
+</div>

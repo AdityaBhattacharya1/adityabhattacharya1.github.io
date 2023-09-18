@@ -1,0 +1,90 @@
+---
+type ExperienceData = {
+	name: string
+	startDate: number | string
+	endDate: number | string
+	location: string
+	description: string[]
+}
+
+type Props = {
+	data: ExperienceData[]
+}
+
+const props = Astro.props
+---
+
+<style>
+	.main {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.name {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	.years {
+		font-size: 1rem;
+		font-family: 'Roboto Mono', sans-serif;
+	}
+
+	.location {
+		font-size: 1rem;
+		font-family: 'Roboto Mono', sans-serif;
+		line-height: 1.25rem;
+		margin-top: 0.75rem;
+		color: #44ab96;
+	}
+
+	.li {
+		list-style-type: '| ';
+	}
+
+	.li > .li-item {
+		max-width: 100ch;
+	}
+
+	@media screen and (max-width: 768px) {
+		.main {
+			flex-direction: row;
+		}
+	}
+</style>
+<section class="main">
+	<div style={{ width: '100%' }}>
+		{
+			props.data.map((item, idx) => (
+				<div style="margin: 2rem">
+					<div class="container">
+						<h1 class="name">{item.name}</h1>
+						<p class="years">
+							{item.startDate} - {item.endDate}
+						</p>
+					</div>
+					<p class="location">{item.location}</p>
+					<ul
+						style={{
+							marginTop: '0.75rem',
+						}}
+						class="li"
+					>
+						{item.description.map((item) => (
+							<li class="li-item">{item}</li>
+						))}
+					</ul>
+				</div>
+			))
+		}
+	</div>
+</section>

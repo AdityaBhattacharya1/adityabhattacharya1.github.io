@@ -1,0 +1,98 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 40vh;
+	width: 25rem;
+	padding: 5rem;
+	margin-top: 2rem;
+}
+
+.header {
+	color: #165148;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 1rem;
+}
+
+.success-txt {
+	color: #165148;
+	padding: 10rem 5rem;
+	font-size: larger;
+}
+
+.error-txt {
+	color: #ff0033;
+	font-size: 0.75rem;
+}
+
+.icon {
+	height: 3rem;
+	width: 3rem;
+}
+
+.submit-btn {
+	margin-top: 2rem;
+}
+
+.form-group {
+	position: relative;
+	padding: 15px 0 0;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.form-field {
+	font-family: inherit;
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	font-size: 1.3rem;
+	color: #000;
+	padding: 7px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+}
+
+.form-field::placeholder {
+	color: transparent;
+}
+
+.form-field:placeholder-shown ~ .form-label {
+	font-size: 0.75rem;
+	cursor: text;
+	top: 20px;
+}
+
+.form-label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 1rem;
+	color: #9b9b9b;
+}
+
+.form-field {
+	box-shadow: none;
+}
+
+.form-field:focus {
+	padding-bottom: 6px;
+	font-weight: 700;
+	border-width: 3px;
+	border-image: linear-gradient(to right, #11998e, #38ef7d);
+	border-image-slice: 1;
+}
+
+.form-field:focus ~ .form-label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.3s;
+	font-size: 0.55rem;
+	color: #11998e;
+	font-weight: 700;
+}

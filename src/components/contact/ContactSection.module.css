@@ -1,0 +1,154 @@
+.container {
+	position: relative;
+	margin-top: 5rem;
+}
+
+.contact {
+	position: absolute;
+	top: -5rem;
+	right: 5rem;
+	bottom: 0;
+	z-index: 1;
+	background-color: white;
+	border-top-left-radius: 100rem;
+	border-top-right-radius: 100rem;
+}
+
+.socialLink {
+	height: 22px;
+	width: 22px;
+}
+
+.footer {
+	width: 100%;
+	position: relative;
+	height: 65vh;
+	background-image: linear-gradient(
+			rgba(22, 86, 74, 0.752) 20%,
+			rgba(22, 86, 74, 0.914)
+		),
+		url('/topography.svg');
+}
+.footer .col {
+	width: 190px;
+	height: auto;
+	float: left;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	font-size: 15px;
+	line-height: 17px;
+	padding: 20px 0px 20px 0px;
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+}
+.list-container {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.links {
+	color: #b1b1b1;
+	font-size: 14px;
+	font-family: inherit;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px 0px 10px 0px;
+	cursor: pointer;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+}
+.social ul li {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+.links:hover {
+	color: #ffffff;
+	text-decoration: none;
+	transition: 0.1s;
+	-webkit-transition: 0.1s;
+	-moz-transition: 0.1s;
+}
+
+.col p {
+	color: #fff;
+	font-size: 2vh;
+	opacity: 0.7;
+}
+
+.clearfix {
+	clear: both;
+}
+
+@media screen and (min-width: 1280px) {
+	.contain {
+		width: 1200px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 1139px) {
+	.contain .social {
+		width: 1000px;
+		display: block;
+	}
+	.social h1 {
+		margin: 0px;
+	}
+}
+@media screen and (max-width: 950px) {
+	.footer .col {
+		width: 33%;
+	}
+	.footer .col h1 {
+		font-size: 14px;
+	}
+	.links {
+		font-size: 13px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.footer .col {
+		width: 50%;
+	}
+	.footer .col h1 {
+		font-size: 14px;
+	}
+	.links {
+		font-size: 13px;
+	}
+}
+@media screen and (max-width: 340px) {
+	.footer .col {
+		width: 100%;
+	}
+}
+
+.footer-logo {
+	font-size: 7vh;
+	display: flex;
+	padding: 20px;
+	padding-top: 30px;
+	font-weight: 700;
+	color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+	.contact,
+	.footer-logo {
+		display: none;
+	}
+
+	.footer {
+		height: 45vh;
+	}
+}

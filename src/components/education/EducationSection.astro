@@ -1,0 +1,10 @@
+---
+import { educationData } from '../../data/education'
+import ExperienceSection from '../interface/Experience.astro'
+educationData.sort(
+	(a: { endDate: string }, b: { endDate: string }) =>
+		Number(b.endDate) - Number(a.endDate)
+)
+---
+
+<ExperienceSection data={educationData} />

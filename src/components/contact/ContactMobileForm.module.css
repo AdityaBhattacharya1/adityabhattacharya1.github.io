@@ -1,0 +1,120 @@
+.container {
+	padding: 5rem 2rem 0 2rem;
+}
+
+.header {
+	padding-bottom: 1rem;
+	font-size: 3rem;
+	text-decoration: wavy underline 2px;
+	text-underline-offset: 10px;
+}
+
+.error-txt {
+	color: #ff0033;
+	font-size: 1rem;
+}
+
+.icon {
+	height: 3rem;
+	width: 3rem;
+}
+
+.submit-btn {
+	margin-top: 2rem;
+}
+
+.form-group {
+	position: relative;
+	padding: 15px 0 0;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.form-field {
+	font-family: inherit;
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	font-size: 1.2rem;
+	color: #fff;
+	padding: 7px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+}
+
+.form-field::placeholder {
+	color: transparent;
+}
+
+.form-field:placeholder-shown ~ .form-label {
+	font-size: 1rem;
+	cursor: text;
+	top: 20px;
+}
+
+.form-label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 1rem;
+	color: #9b9b9b;
+}
+
+.form-field {
+	box-shadow: none;
+}
+
+.form-field:focus {
+	padding-bottom: 6px;
+	font-weight: 700;
+	border-width: 3px;
+	border-image: linear-gradient(to right, #11998e, #38ef7d);
+	border-image-slice: 1;
+}
+
+.form-field:focus ~ .form-label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.3s;
+	font-size: 0.55rem;
+	color: #11998e;
+	font-weight: 700;
+}
+
+.success-txt {
+	text-align: center;
+	outline: 2px solid;
+}
+
+.svg text {
+	letter-spacing: 10px;
+	stroke: #ebef13d4;
+	font-size: 2rem;
+	font-weight: 700;
+	stroke-width: 2;
+	animation: textAnimate 5s infinite alternate;
+}
+
+@keyframes textAnimate {
+	0% {
+		stroke-dasharray: 0 50%;
+		stroke-dashoffset: 20%;
+		fill: transparent;
+	}
+
+	100% {
+		stroke-dasharray: 50% 0;
+		stroke-dashoffstet: -20%;
+		fill: hsla(189, 68%, 75%, 0%);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container,
+	.success-txt {
+		display: none;
+	}
+}

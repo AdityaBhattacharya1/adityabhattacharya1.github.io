@@ -1,0 +1,26 @@
+.btn {
+	background-color: #ebef13;
+	color: #000821;
+	border: #000821;
+	border-radius: 25px;
+	padding: 1rem 3rem;
+	cursor: pointer;
+	transition: 0.3s ease;
+	border-style: solid;
+}
+
+.btn:hover {
+	color: #ebef13;
+	background-color: #000821;
+	border-color: #ebef13;
+	border-style: solid;
+}
+
+.hero-btn {
+	margin-top: 2rem;
+	height: 5rem;
+	width: 13rem;
+	border-radius: 50px;
+	font-size: 1rem;
+	font-weight: 600;
+}

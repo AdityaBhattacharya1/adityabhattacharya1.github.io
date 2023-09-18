@@ -1,0 +1,104 @@
+---
+type Project = {
+	name: string
+	tech: string[]
+	description: string
+	image: string
+	githubLink: string
+	link?: string
+}
+const { name, description, githubLink, image, tech, link } = Astro.props
+---
+
+<style>
+	.container {
+		display: flex;
+		padding: 2rem;
+		column-gap: 1.5rem;
+	}
+
+	.header {
+		font-size: 2rem;
+		font-family: 'Roboto Mono', monospace;
+	}
+
+	.img-container {
+		width: 50%;
+	}
+
+	.img {
+		width: 90%;
+	}
+
+	.text-container {
+		width: 50%;
+	}
+
+	.header:after {
+		content: ' ';
+		display: block;
+		border: 2px solid #ebef13d4;
+		border-radius: 25px;
+		width: 70%;
+		margin: 1rem 0;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	}
+
+	.desc {
+		width: 90%;
+	}
+
+	.btn-container {
+		padding-top: 2rem;
+		display: flex;
+		column-gap: 2rem;
+	}
+
+	.btn-container > a {
+		color: #ebef13d4;
+		text-decoration: none;
+		border-bottom: 2px dotted #ebef13d4;
+		font-family: 'Roboto Mono', monospace;
+	}
+
+	.tech {
+		padding-top: 1rem;
+		font-family: 'Roboto Mono', monospace;
+	}
+
+	@media screen and (max-width: 500px) {
+		.container {
+			flex-direction: column;
+		}
+
+		.img-container,
+		.desc {
+			width: 100%;
+			padding-bottom: 1rem;
+		}
+
+		.text-container {
+			width: 100%;
+		}
+	}
+</style>
+<article class="container">
+	<div class="img-container">
+		<img
+			src={image}
+			alt={name}
+			class="img"
+			loading="lazy"
+			decoding="async"
+		/>
+	</div>
+	<div class="text-container">
+		<h2 class="header">{name}</h2>
+		<p class="desc">{description}</p>
+		<p class="tech">Tech - {tech.join(', ')}</p>
+		<div class="btn-container">
+			<a href={githubLink}>Code ↗</a>
+			{link && <a href={link}>Demo ↗</a>}
+		</div>
+	</div>
+</article>

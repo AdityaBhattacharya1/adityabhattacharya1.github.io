@@ -1,0 +1,193 @@
+---
+import Menu from '../components/interface/Menu'
+import Header from '../components/Header.astro'
+import Button from '../components/interface/Button'
+import AboutSection from '../components/about/About.astro'
+import ProjectSection from '../components/projects/ProjectSection.astro'
+import SkillSection from '../components/skills/SkillSection.astro'
+import EducationSection from '../components/education/EducationSection.astro'
+import ProfessionalExperienceSection from '../components/profession/ProfessionalExperienceSection.astro'
+import ContactSection from '../components/contact/ContactSection'
+---
+
+<html lang="en">
+	<head>
+		<Header />
+		<style is:global>
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+			* {
+				font-family: 'Poppins', sans-serif;
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				scroll-behavior: smooth;
+				position: relative;
+				outline: 1px solid rgba(235, 239, 19, 0.08);
+			}
+
+			body {
+				background-color: -webkit-linear-gradient(#eee, #333);
+				color: #ebef13d4;
+				/* changing opacity of bg img */
+				background-image: linear-gradient(
+						rgba(0, 8, 33, 0.9),
+						rgba(0, 8, 33, 0.9)
+					),
+					url('/topography.svg');
+			}
+		</style>
+		<style>
+			.hero,
+			.section-headers {
+				margin: 0 2rem;
+			}
+
+			.header {
+				position: relative;
+				overflow: hidden;
+				min-height: 45rem;
+				padding-top: 2rem;
+				font-weight: 400;
+			}
+
+			.header:after {
+				content: '';
+				position: absolute;
+				width: 100vw;
+				height: 100%;
+				top: 0;
+				right: 0;
+				z-index: -1;
+				background: url('/Taieri.svg') 100% 0 no-repeat;
+			}
+
+			.header-txt {
+				font-size: 7rem;
+			}
+
+			.header-txt:not(:first-child) {
+				width: 40%;
+			}
+
+			.section-headers {
+				text-decoration: underline #ebef13 2px;
+				text-underline-offset: 10px;
+			}
+
+			.section-headers:not(:first-child) {
+				padding-top: 5rem;
+			}
+
+			/* tablet specific media */
+			@media only screen and (max-width: 90rem) {
+				.header:after {
+					background:
+						linear-gradient(
+							to bottom right,
+							rgba(0, 8, 33, 1),
+							rgba(0, 8, 33, 0.5)
+						),
+						url('/Taieri.svg') 100% 0 no-repeat;
+					background-position: top right;
+				}
+			}
+
+			@media only screen and (max-width: 52rem) {
+				.header-txt {
+					font-size: 7rem;
+					padding: 1rem 0;
+				}
+
+				#lastname {
+					display: none;
+				}
+
+				.section-headers {
+					font-size: 6rem;
+				}
+
+				.header {
+					min-height: 55vh;
+				}
+			}
+
+			@media only screen and (max-width: 25rem) {
+				.header-txt {
+					font-size: 3rem;
+				}
+
+				.hero-title {
+					font-size: 4.5rem;
+				}
+
+				.skill-section {
+					display: none;
+				}
+			}
+
+			@media only screen and (min-width: 1024px) {
+				.header {
+					min-height: 45rem;
+				}
+			}
+		</style>
+		<script>
+			const button = document.querySelector('.hero-btn')
+			button.addEventListener(
+				'click',
+				() => (window.location.href = '#contact')
+			)
+		</script>
+	</head>
+	<body>
+		<Menu />
+		<header class="header">
+			<div class="hero">
+				<h3>hi there, i&apos;m</h3>
+				<h1 class="header-txt hero-title" }>
+					Aditya <span id="lastname">Bhattacharya</span>
+				</h1>
+				<h3>Software Developer | UI/UX Designer</h3>
+				<!-- onclick is set to a void function cause it doesn't seem to work with astro :/ -->
+				<Button
+					text="Say Hi"
+					className="hero-btn"
+					onClick={() => {}}
+					type="button"
+					client:load
+				/>
+			</div>
+		</header>
+		<main>
+			<h1 class="header-txt section-headers" id="about" tabindex={0}>
+				About Me
+			</h1>
+			<AboutSection />
+			<h1 class="header-txt section-headers" id="projects" tabindex={0}>
+				Projects
+			</h1>
+			<ProjectSection />
+			<div class="skill-section">
+				<h1 class="header-txt section-headers" id="skills" tabindex={0}>
+					Skills
+				</h1>
+				<SkillSection />
+			</div>
+
+			<h1 class="header-txt section-headers" id="education" tabindex={0}>
+				Education
+			</h1>
+			<EducationSection />
+			<h1 class="header-txt section-headers" id="experience" tabindex={0}>
+				Experience
+			</h1>
+			<ProfessionalExperienceSection />
+			<ContactSection client:visible />
+		</main>
+		<script
+			src="https://cdn.counter.dev/script.js"
+			data-id="2666b91a-6071-4c22-ada5-4f9ac519b4e5"
+			data-utcoffset="6"
+			type="text/partytown"></script>
+	</body>
+</html>
