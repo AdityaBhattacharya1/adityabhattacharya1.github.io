@@ -6,5 +6,5 @@ import partytown from '@astrojs/partytown'
 // https://astro.build/config
 export default defineConfig({
 	integrations: [react(), partytown()],
-	site: 'adityabhattacharya.github.io',
+	site: 'https://adityabhattacharya.github.io',
 })
