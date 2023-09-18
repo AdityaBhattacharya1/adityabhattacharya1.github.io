@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://adityabhattacharya1.github.io
+
+# Sitemaps
+Sitemap: https://adityabhattacharya1.github.io/sitemap-index.xml

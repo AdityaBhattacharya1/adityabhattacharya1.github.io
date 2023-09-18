@@ -1,10 +1,11 @@
-import { defineConfig } from 'astro/config'
-import react from '@astrojs/react'
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+import partytown from '@astrojs/partytown';
 
-import partytown from '@astrojs/partytown'
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [react(), partytown()],
-	site: 'https://adityabhattacharya.github.io',
-})
+  integrations: [react(), partytown(), sitemap()],
+  site: 'https://adityabhattacharya.github.io'
+});
