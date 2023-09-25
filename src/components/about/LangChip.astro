@@ -1,5 +1,9 @@
 ---
-const { icon, name } = Astro.props
+type Props = {
+	name: string
+	key: number
+}
+const { name } = Astro.props
 ---
 
 <style>
@@ -14,6 +18,5 @@ const { icon, name } = Astro.props
 	}
 </style>
 <div class="lang-chip">
-	{icon}
 	{name}
 </div>

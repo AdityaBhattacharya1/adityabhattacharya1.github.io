@@ -1,4 +1,9 @@
 ---
+type Props = {
+	number: number
+	title: string
+	altText: string
+}
 const { number, title, altText } = Astro.props
 let resStr = number < 10 ? `0${number}.` : `${number}.`
 ---
