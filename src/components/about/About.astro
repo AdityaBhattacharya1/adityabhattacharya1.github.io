@@ -1,54 +1,6 @@
 ---
 import LanguageChip from './LangChip.astro'
-
-type TechChip = {
-	name: string
-}
-
-const techs: TechChip[] = [
-	{
-		name: 'HTML5',
-	},
-	{
-		name: 'CSS3',
-	},
-	{
-		name: 'JavaScript',
-	},
-	{
-		name: 'TypeScript',
-	},
-	{
-		name: 'React',
-	},
-	{
-		name: 'Next.js',
-	},
-	{
-		name: 'Python',
-	},
-	{
-		name: 'Golang',
-	},
-	{
-		name: 'Node.js',
-	},
-	{
-		name: 'MongoDB',
-	},
-	{
-		name: 'MySQL',
-	},
-	{
-		name: 'Docker',
-	},
-	{
-		name: 'GraphQL',
-	},
-	{
-		name: 'Git',
-	},
-]
+import { skills } from '../../data/skills'
 ---
 
 <style>
@@ -97,8 +49,8 @@ const techs: TechChip[] = [
 		I have experience with the following technologies:
 		<div class="chip-container">
 			{
-				techs.map((tech, idx) => {
-					return <LanguageChip name={tech.name} key={idx} />
+				skills.map((tech, idx) => {
+					return <LanguageChip name={tech.title} key={idx} />
 				})
 			}
 		</div>

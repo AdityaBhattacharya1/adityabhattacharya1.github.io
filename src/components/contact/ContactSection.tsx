@@ -7,7 +7,7 @@ import MailIcon from '../../assets/Mail'
 
 function ContactSection() {
 	return (
-		<section id="contact">
+		<footer id="contact">
 			<ContactMobileForm />
 			<div className={classes.container}>
 				<div className={classes.contact}>
@@ -15,7 +15,7 @@ function ContactSection() {
 				</div>
 				<Footer />
 			</div>
-		</section>
+		</footer>
 	)
 }
 
