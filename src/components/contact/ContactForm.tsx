@@ -5,7 +5,8 @@ import ContactIcon from '../../assets/ContactIcon'
 import useInput from '../../hooks/useForm'
 
 export default function ContactForm() {
-	const [state, handleSubmit] = useForm(import.meta.env.FORMSPREE_KEY)
+	console.log(import.meta.env.VITE_FORMSPREE_KEY)
+	const [state, handleSubmit] = useForm(import.meta.env.PUBLIC_FORMSPREE_KEY)
 	const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/gi
 
 	// form validation fun stuff!
