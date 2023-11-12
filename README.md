@@ -7,7 +7,7 @@
 
 This is the GitHub repository for my portfolio website, made using Astro and React 🚀
 
-**Website is up and running at https://adityabh.is-a.dev/**
+**The website is up and running at https://adityabh.is-a.dev/**
 
 ## Technologies Used
 
