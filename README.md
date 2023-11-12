@@ -52,7 +52,7 @@ All commands are run from the root of the project, from a terminal:
 
 ## Installation and Running
 
-Get your FormSpree form key and add it into a `.env` file, as given in the `.sample.env` file.
+Get your FormSpree form hash ID and add it into a `.env` file, as given in the `.sample.env` file.
 
 ```sh
 git clone https://github.com/AdityaBhattacharya1/adityabhattacharya1.github.io portfolio-website
