@@ -25,7 +25,6 @@ jobs:
               run: |
                   touch .env
                   echo 'FORMSPREE_KEY=${{ secrets.FORMSPREE_KEY}}' >> .env
-                  cat .env
             - name: Install, build, and upload your site
               uses: withastro/action@v0
 
