@@ -9,6 +9,15 @@ type Project = {
 
 export const projects: Project[] = [
 	{
+		name: 'Medico',
+		tech: ['React Native', 'Strapi CMS', 'Expo', 'MySQL'],
+		description:
+			'A digital doctor and hospital appointment booking app, compatible with both iOS and Android.',
+		image: './medico.png',
+		githubLink: 'https://github.com/AdityaBhattacharya1/medico',
+		link: '',
+	},
+	{
 		name: 'Lorem Travels',
 		tech: ['Gatsby', 'React', 'CSS', 'NodeJS', 'Stripe'],
 		description:
@@ -28,7 +37,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'CodePen Clone',
-		tech: ['FastAPI', 'Python', 'SQLite', 'HTML/CSS'],
+		tech: ['React', 'CSS'],
 		description:
 			'A CodePen Clone with added features like auto-closing brackets, linting, code collapse. Bonus: The code editor has the Material Ocean theme by default.',
 		image: './codepen-clone.png',
