@@ -5,11 +5,35 @@ type Skills = {
 
 export const skills: Skills[] = [
 	{
-		title: 'HTML5',
+		title: 'React',
+		alt: 'React',
+	},
+	{
+		title: 'Next.js',
+		alt: 'Next',
+	},
+	{
+		title: 'MongoDB',
+		alt: 'MongoDB',
+	},
+	{
+		title: 'Python',
+		alt: 'Python',
+	},
+	{
+		title: 'Express',
+		alt: 'Express',
+	},
+	{
+		title: 'SQL',
+		alt: 'SQL',
+	},
+	{
+		title: 'HTML',
 		alt: 'HTML',
 	},
 	{
-		title: 'CSS3',
+		title: 'CSS',
 		alt: 'CSS',
 	},
 	{
@@ -21,47 +45,43 @@ export const skills: Skills[] = [
 		alt: 'TS',
 	},
 	{
-		title: 'React',
-		alt: 'React',
-	},
-	{
-		title: 'Next.js',
-		alt: 'Next',
-	},
-	{
-		title: 'Python',
-		alt: 'Python',
-	},
-	{
-		title: 'Golang',
-		alt: 'Golang',
+		title: 'Java',
+		alt: 'Java',
 	},
 	{
 		title: 'Node.js',
 		alt: 'Node',
 	},
 	{
-		title: 'MongoDB',
-		alt: 'MongoDB',
-	},
-	{
-		title: 'MySQL',
-		alt: 'SQL',
-	},
-	{
 		title: 'Docker',
 		alt: 'Docker',
 	},
 	{
-		title: 'WCAG',
-		alt: 'A11Y',
+		title: 'Git',
+		alt: 'Git',
 	},
 	{
 		title: 'GraphQL',
 		alt: 'GraphQL',
 	},
 	{
-		title: 'Git',
-		alt: 'Git',
+		title: 'Tailwind CSS',
+		alt: 'Tailwind',
+	},
+	{
+		title: 'React Native',
+		alt: 'React Native',
+	},
+	{
+		title: 'Django',
+		alt: 'Django',
+	},
+	{
+		title: 'GitHub',
+		alt: 'GitHub',
+	},
+	{
+		title: 'GenAI',
+		alt: 'GenAI',
 	},
 ]

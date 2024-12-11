@@ -18,9 +18,18 @@
 
 .hero-btn {
 	margin-top: 2rem;
-	height: 5rem;
-	width: 13rem;
+	height: 4.5rem;
+	width: 10rem;
 	border-radius: 50px;
 	font-size: 1rem;
 	font-weight: 600;
+	margin: 0.3rem;
+}
+
+@media screen and (max-width: 400px) {
+	.hero-btn {
+		height: 3.5rem;
+		width: 9rem;
+		font-size: 0.6rem;
+	}
 }

@@ -1,0 +1,163 @@
+<html>
+	<body>
+		<div class="wrap-404">
+			<div class="label">Error</div>
+
+			<div class="numbers">
+				<div class="number four"></div>
+				<div class="number zero">
+					<span></span>
+				</div>
+				<div class="number four last"></div>
+			</div>
+
+			<div class="text">
+				<p>Looks like you got lost.</p>
+				<p>
+					Go back <a href="/">home</a>.
+				</p>
+			</div>
+		</div>
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+			:root {
+				--main-font: 'Bad Script', cursive;
+				--primary: #ebef13d4;
+				--n-width: 30px;
+				--n-height: calc(var(--n-width) * 5);
+			}
+
+			body {
+				font-family: 'Roboto Mono', sans-serif;
+				font-size: 16px;
+				background-image: linear-gradient(
+						rgba(0, 8, 33, 0.9),
+						rgba(0, 8, 33, 0.9)
+					),
+					url('/topography.svg');
+				color: var(--primary);
+			}
+
+			.wrap-404 {
+				overflow: hidden;
+				padding: 2rem 1rem;
+			}
+
+			.label {
+				text-align: center;
+				font-size: 1.75em;
+			}
+
+			.numbers {
+				display: flex; /* Use flexbox to align the numbers horizontally */
+				justify-content: center; /* Center the numbers */
+				gap: 7rem; /* Add spacing between the numbers */
+				padding: 5rem 0 0;
+			}
+
+			.number {
+				position: relative;
+				display: flex; /* Change to flex to allow better alignment */
+				width: var(--n-height);
+				transform: translateX(
+					0
+				); /* Reset translate to avoid overlapping */
+			}
+
+			.four {
+				position: relative;
+				width: var(--n-width);
+				height: var(--n-height);
+				border: 1px solid var(--primary);
+			}
+
+			.four::before,
+			.four::after {
+				content: '';
+				position: absolute;
+				border: 1px solid var(--primary);
+			}
+
+			.four::before {
+				top: 50%;
+				right: -1rem;
+				width: calc(var(--n-width) * 4);
+				height: var(--n-width);
+			}
+
+			.four::after {
+				top: 0;
+				left: calc(-1 * var(--n-width) * 2);
+				width: var(--n-width);
+				height: calc(var(--n-height) - var(--n-width));
+			}
+
+			.zero {
+				position: relative;
+				width: var(--n-width);
+				height: var(--n-height);
+				border: 1px solid var(--primary);
+			}
+
+			.zero span {
+				position: absolute;
+				top: 0;
+				left: calc(-1 * var(--n-width) * 2);
+				width: var(--n-width);
+				height: var(--n-height);
+				border: 1px solid var(--primary);
+			}
+
+			.zero::before,
+			.zero::after {
+				content: '';
+				position: absolute;
+				border: 1px solid var(--primary);
+			}
+
+			.zero::before {
+				top: 1rem;
+				right: -1rem;
+				width: calc(var(--n-width) * 4);
+				height: var(--n-width);
+			}
+
+			.zero::after {
+				bottom: 1rem;
+				right: -1rem;
+				width: calc(var(--n-width) * 4);
+				height: var(--n-width);
+			}
+
+			.text {
+				position: relative;
+				padding-top: 6rem;
+				text-align: center;
+				font-size: 1.125em;
+			}
+
+			.text a {
+				color: var(--primary);
+			}
+
+			.text::before {
+				content: '';
+				position: absolute;
+				top: 4rem;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 6rem;
+				height: 1px;
+				background-image: repeating-linear-gradient(
+					to left,
+					rgba(var(--primary), 0.35) 0,
+					rgba(var(--primary), 0.35) 0.5rem,
+					transparent 0.5rem,
+					transparent 1rem
+				);
+			}
+		</style>
+	</body>
+</html>

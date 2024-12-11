@@ -1,12 +1,11 @@
 ---
-const title = 'Aditya Bhattacharya | Portfolio Website'
-const description =
-	'Portfolio website for Aditya Bhattacharya, a software developer and UI/UX Designer'
 type Props = {
 	previewImage: string | '/hero-preview.png'
 	url: string | 'https://adityabh.is-a.dev'
+	title?: string
+	description?: string
 }
-const { previewImage, url } = Astro.props
+const { previewImage, url, title, description } = Astro.props
 ---
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,14 +21,14 @@ const { previewImage, url } = Astro.props
 <meta name="language" content="English" />
 <meta name="author" content="Aditya Bhattacharya" />
 
-{/* Open Graph tags */}
+<!-- Open Graph Tags -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={previewImage} />
 
-{/* twitter specific */}
+<!-- Twitter specific -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={url} />
 <meta property="twitter:title" content={title} />
@@ -37,3 +36,16 @@ const { previewImage, url } = Astro.props
 <meta property="twitter:image" content={previewImage} />
 
 <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+
+<!-- Privacy-friendly Analytics -->
+<script
+	async
+	src="https://cdn.splitbee.io/sb.js"
+	type="text/partytown"
+	is:inline></script>
+<script
+	src="https://beamanalytics.b-cdn.net/beam.min.js"
+	data-token="a24be98c-ce23-46dc-93d4-d67b6ca7118d"
+	async
+	type="text/partytown"
+	is:inline></script>

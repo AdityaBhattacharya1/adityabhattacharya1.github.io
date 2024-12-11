@@ -22,6 +22,8 @@ export const educationData: EducationData[] = [
 		endDate: '2027',
 		description: [
 			"Bachelor's of Technology (B.Tech) in Information Technology",
+			'Student Intern at VIERP, college’s own educational platform - led a team in developing a costless AI video summariser',
+			'CGPA: 9.41',
 		],
 	},
 ]

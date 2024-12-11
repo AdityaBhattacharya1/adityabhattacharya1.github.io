@@ -33,10 +33,6 @@ function Footer() {
 			name: 'Education',
 			path: '/#education',
 		},
-		{
-			name: '404 Page',
-			path: '/404',
-		},
 	]
 
 	const socials = [

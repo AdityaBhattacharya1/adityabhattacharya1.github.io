@@ -5,8 +5,9 @@ import { skills } from '../../data/skills'
 
 <style>
 	.container {
-		padding: 0 2rem 0 2rem;
+		padding-left: 1rem;
 		font-size: 1.15rem;
+		word-break: break-word;
 	}
 
 	.chip-container {
@@ -26,6 +27,12 @@ import { skills } from '../../data/skills'
 
 		.more-data {
 			display: block;
+		}
+	}
+
+	@media screen and (max-width: 300px) {
+		.container {
+			padding: none;
 		}
 	}
 </style>

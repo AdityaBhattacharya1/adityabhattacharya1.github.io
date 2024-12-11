@@ -6,7 +6,7 @@ import SkillCard from './SkillCard.astro'
 <style>
 	.container {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		column-gap: 1rem;
 		row-gap: 2rem;
@@ -42,7 +42,6 @@ import SkillCard from './SkillCard.astro'
 					number={idx + 1}
 					title={skill.title}
 					altText={skill.alt}
-					key={idx}
 				/>
 			)
 		})

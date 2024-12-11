@@ -13,20 +13,15 @@ import ContactSection from '../components/contact/ContactSection'
 <html lang="en">
 	<head>
 		<Header
+			title="Aditya Bhattacharya | Portfolio Website"
+			description="Portfolio website for Aditya Bhattacharya, a software developer and UI/UX Designer"
 			previewImage="/hero-preview.png"
 			url="https://adityabh.is-a.dev"
 		/>
-		<script
-			src="https://cdn.counter.dev/script.js"
-			data-id="2666b91a-6071-4c22-ada5-4f9ac519b4e5"
-			data-utcoffset="6"
-			type="text/partytown"></script>
-		<script async src="https://cdn.splitbee.io/sb.js" type="text/partytown"
-		></script>
-		<script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="a24be98c-ce23-46dc-93d4-d67b6ca7118d" async type="text/partytown"></script>
-
 		<style is:global>
 			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 			* {
 				font-family: 'Poppins', sans-serif;
 				padding: 0;
@@ -50,12 +45,13 @@ import ContactSection from '../components/contact/ContactSection'
 						rgba(0, 8, 33, 0.9)
 					),
 					url('/topography.svg');
+				font-family: 'Poppins', sans-serif;
 			}
 		</style>
 		<style>
 			.hero,
 			.section-headers {
-				margin: 0 2rem;
+				margin-left: 1rem;
 			}
 
 			.header {
@@ -94,6 +90,12 @@ import ContactSection from '../components/contact/ContactSection'
 				padding-top: 5rem;
 			}
 
+			.btn-container {
+				display: flex;
+				flex-direction: row;
+				padding: 1rem 0;
+			}
+
 			/* tablet specific media */
 			@media only screen and (max-width: 90rem) {
 				.header:after {
@@ -108,10 +110,11 @@ import ContactSection from '../components/contact/ContactSection'
 				}
 			}
 
-			@media only screen and (max-width: 52rem) {
+			@media only screen and (max-width: 40rem) {
 				.header-txt {
-					font-size: 7rem;
+					font-size: 3.5rem;
 					padding: 1rem 0;
+					margin: none;
 				}
 
 				#lastname {
@@ -119,7 +122,7 @@ import ContactSection from '../components/contact/ContactSection'
 				}
 
 				.section-headers {
-					font-size: 6rem;
+					font-size: 3.5rem;
 				}
 
 				.header {
@@ -127,8 +130,9 @@ import ContactSection from '../components/contact/ContactSection'
 				}
 			}
 
-			@media only screen and (max-width: 25rem) {
-				.header-txt {
+			@media only screen and (max-width: 27rem) {
+				.header-txt,
+				.section-headers {
 					font-size: 3rem;
 				}
 
@@ -148,10 +152,19 @@ import ContactSection from '../components/contact/ContactSection'
 			}
 		</style>
 		<script>
-			const button = document.querySelector('.hero-btn')
-			button?.addEventListener(
+			const contactDirectBtn = document.querySelector(
+				'#contact-direct-btn'
+			)
+			const blogDirectBtn = document.querySelector('#blog-direct-btn')
+			const BLOG_PAGE_LINK = 'https://blogs.adityabh.is-a.dev'
+
+			contactDirectBtn?.addEventListener(
 				'click',
 				() => (window.location.href = '#contact')
+			)
+			blogDirectBtn?.addEventListener(
+				'click',
+				() => (window.location.href = BLOG_PAGE_LINK)
 			)
 		</script>
 	</head>
@@ -166,14 +179,22 @@ import ContactSection from '../components/contact/ContactSection'
 				<h2 style="font-weight: 300">
 					Software Developer | UI/UX Designer
 				</h2>
-				<!-- onclick is set to a void function cause it doesn't seem to work with astro :/ -->
-				<Button
-					text="Say Hi"
-					className="hero-btn"
-					onClick={() => {}}
-					type="button"
-					client:load
-				/>
+				<div class="btn-container">
+					<Button
+						text="Say Hi"
+						className="hero-btn"
+						id="contact-direct-btn"
+						type="button"
+						client:load
+					/>
+					<Button
+						text="Blogs"
+						className="hero-btn"
+						id="blog-direct-btn"
+						type="button"
+						client:load
+					/>
+				</div>
 			</div>
 		</header>
 		<main>
@@ -181,6 +202,10 @@ import ContactSection from '../components/contact/ContactSection'
 				About Me
 			</h1>
 			<AboutSection />
+			<h1 class="header-txt section-headers" id="experience" tabindex={0}>
+				Experience
+			</h1>
+			<ProfessionalExperienceSection />
 			<h1 class="header-txt section-headers" id="projects" tabindex={0}>
 				Projects
 			</h1>
@@ -196,10 +221,6 @@ import ContactSection from '../components/contact/ContactSection'
 				Education
 			</h1>
 			<EducationSection />
-			<h1 class="header-txt section-headers" id="experience" tabindex={0}>
-				Experience
-			</h1>
-			<ProfessionalExperienceSection />
 			<ContactSection client:visible />
 		</main>
 	</body>

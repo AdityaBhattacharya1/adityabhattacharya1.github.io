@@ -7,9 +7,10 @@ type Props = {
 	className?: string
 	type: 'button' | 'submit' | 'reset' | undefined
 	disabled?: boolean
+	id?: string
 }
 
-function Button({ text, onClick, className, type, disabled }: Props) {
+function Button({ text, onClick, className, type, disabled, id }: Props) {
 	let classNames = `${className || ''} ${classes.btn} `
 	className == 'hero-btn' ? (classNames += classes['hero-btn']) : ''
 	return (
@@ -18,6 +19,7 @@ function Button({ text, onClick, className, type, disabled }: Props) {
 			onClick={onClick}
 			type={type}
 			disabled={disabled}
+			id={id}
 		>
 			{text}
 		</button>
