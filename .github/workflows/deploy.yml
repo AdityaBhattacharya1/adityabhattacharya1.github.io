@@ -20,13 +20,13 @@ jobs:
         environment: github-pages
         steps:
             - name: Checkout your repository using git
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
             - name: Write .env file
               run: |
                   touch .env
                   echo 'PUBLIC_FORMSPREE_KEY=${{ secrets.FORMSPREE_KEY}}' >> .env
             - name: Install, build, and upload your site
-              uses: withastro/action@v0
+              uses: withastro/action@v5
 
     deploy:
         needs: build
@@ -37,4 +37,4 @@ jobs:
         steps:
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v1
+              uses: actions/deploy-pages@v4
