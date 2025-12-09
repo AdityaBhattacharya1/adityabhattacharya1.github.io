@@ -8,6 +8,17 @@ type ExperienceData = {
 
 export const experienceData: ExperienceData[] = [
 	{
+		name: 'AI Planet',
+		location: 'Remote, Belgium/Hyderabad',
+		startDate: 'Nov 2024',
+		endDate: 'May 2025',
+		description: [
+			'Achieved a 63% reduction in latency for evaluation services deployed using Kubernetes and AWS Load Balancer via efficient audio processing and deployment architecture changes.',
+			'Developed high-throughput data analysis pipelines with CSV, Excel, and database support for the flagship vertical agent Buddhi AI; these pipelines were later featured in multiple enterprise-level demonstrations.',
+			'Engineered various intricate human-in-the-loop orchestration flows and automated agentic workflows with intermediate state context storage and recall for AI Platform by AI Planet.',
+		],
+	},
+	{
 		name: 'InterviewMate',
 		location: 'Remote, California',
 		startDate: 'Jun 2024',

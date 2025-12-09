@@ -73,10 +73,6 @@ export const skills: Skills[] = [
 		alt: 'React Native',
 	},
 	{
-		title: 'Django',
-		alt: 'Django',
-	},
-	{
 		title: 'GitHub',
 		alt: 'GitHub',
 	},

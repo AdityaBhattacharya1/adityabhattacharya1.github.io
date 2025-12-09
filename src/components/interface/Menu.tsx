@@ -29,6 +29,14 @@ function Menu() {
 				<AboutIcon />
 			</a>
 			<a
+				href="#experience"
+				onClick={() => setActiveNav('#experience')}
+				className={classes[activeNav === '#experience' ? 'active' : '']}
+				aria-label="professional experience"
+			>
+				<BriefcaseIcon />
+			</a>
+			<a
 				href="#projects"
 				onClick={() => setActiveNav('#projects')}
 				className={classes[activeNav === '#projects' ? 'active' : '']}
@@ -55,14 +63,6 @@ function Menu() {
 				aria-label="educational experience"
 			>
 				<EducationIcon />
-			</a>
-			<a
-				href="#experience"
-				onClick={() => setActiveNav('#experience')}
-				className={classes[activeNav === '#experience' ? 'active' : '']}
-				aria-label="professional experience"
-			>
-				<BriefcaseIcon />
 			</a>
 			<a
 				href="#contact"

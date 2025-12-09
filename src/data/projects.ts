@@ -9,6 +9,24 @@ type Project = {
 
 export const projects: Project[] = [
 	{
+		name: 'LetterPair',
+		tech: ['NextJS', 'TypeScript', 'Tailwind'],
+		description:
+			'Letter Pair analyzes font compatibility using typographic metrics like x-height ratio, stroke contrast, and proportional harmony. Instantly compare fonts and make smarter pairing decisions with data-driven insights.',
+		image: './letterpair.png',
+		githubLink: 'https://github.com/AdityaBhattacharya1/letterPair',
+		link: 'https://letter-pair.vercel.app/',
+	},
+	{
+		name: 'Chester',
+		tech: ['TypeScript', 'Python', 'LangChain', 'PostgreSQL'],
+		description:
+			'Chester is a hobbyist programming language based LLM Benchmarking tool designed for simplicity and experimentation.',
+		image: './chester.png',
+		githubLink: 'https://github.com/AdityaBhattacharya1/Chester',
+		link: '',
+	},
+	{
 		name: 'Medico',
 		tech: ['React Native', 'Strapi CMS', 'Expo', 'MySQL'],
 		description:
@@ -17,15 +35,7 @@ export const projects: Project[] = [
 		githubLink: 'https://github.com/AdityaBhattacharya1/medico',
 		link: '',
 	},
-	{
-		name: 'Lorem Travels',
-		tech: ['Gatsby', 'React', 'CSS', 'NodeJS', 'Stripe'],
-		description:
-			"A fake travel agency website. It's a statically generated website, has e-commerce functionality, and privacy-friendly analytics (GoatCounter). Also works offline :)",
-		image: './lorem-travels.png',
-		githubLink: 'https://github.com/AdityaBhattacharya1/lorem-travels',
-		link: 'https://lorem-travels.vercel.app',
-	},
+
 	{
 		name: 'Library Rest API',
 		tech: ['NodeJS', 'Express', 'Docker', 'Jest', 'MongoDB', 'JWT'],
@@ -33,15 +43,6 @@ export const projects: Project[] = [
 			'A sample REST API for a (totally) real library. Batteries included.',
 		image: './library-rest-api.png',
 		githubLink: 'https://github.com/AdityaBhattacharya1/library-rest-api',
-		link: '',
-	},
-	{
-		name: 'CodePen Clone',
-		tech: ['React', 'CSS'],
-		description:
-			'A CodePen Clone with added features like auto-closing brackets, linting, code collapse. Bonus: The code editor has the Material Ocean theme by default.',
-		image: './codepen-clone.png',
-		githubLink: 'https://github.com/AdityaBhattacharya1/Codepen-Clone',
 		link: '',
 	},
 ]
